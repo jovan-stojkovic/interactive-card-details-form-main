@@ -8,42 +8,73 @@
     <script defer src="app.js"></script>
   </head>
   <body>
+    <div class="purple-bacground"></div>
     <main>
-      <div class="left">
-        <div class="purple">
-          <div class="front-card card"></div>
-          <div class="back-card card"></div>
-        </div>
-      </div>
-      <div class="right">
-        <form id="form">
-          <div class="name">
-            <label for="name">CARDHOLDER NAME</label>
-            <input id="name" type="text" placeholder="e.g. Jane Appleseed" />
-          </div>
-          <div class="number">
-            <label for="number">CARD NUMBER</label>
-            <input
-              id="number"
-              type="text"
-              placeholder="e.g. 1234 5678 9123 0000"
-            />
-          </div>
-          <div class="bottom-part">
-            <div class="date">
-              <label for="date"> EXP. DATE (MM/YY)</label>
-              <div class="date-inputs">
-                <input type="number" id="date" placeholder="MM" />
-                <input type="number" placeholder="YY" />
+      <div class="main-container">
+        <div class="cards">
+          <div class="front-card card">
+            <div class="circles">
+              <img
+                class="full-circle"
+                src="https://www.iconbolt.com/iconsets/fluent-filled/circle.svg"
+              />
+              <img
+                class="empty-circle"
+                src="https://www.iconbolt.com/iconsets/bootstrap-icons/circle.svg"
+              />
+            </div>
+            <p id="card-number">9140 9140 9140 9140</p>
+            <div class="card-bottom">
+              <p id="card-name">jovan stojkovic</p>
+              <div class="card-date">
+                <p id="mm-card">09</p>
+                <p>/</p>
+                <p id="yy-card">00</p>
               </div>
             </div>
-            <div class="cvc-part">
-              <label for="cvc">CVC</label>
-              <input id="cvc" type="number" placeholder="e.g. 123">
-            </div>
           </div>
-          <button type="submit">Confirm</button>
-        </form>
+          <div class="back-card card">
+            <p class="cvc-card">000</p>
+          </div>
+        </div>
+        <div class="form-container">
+          <form id="form">
+            <div class="name">
+              <label for="name-input">CARDHOLDER NAME</label>
+              <input
+                id="name-input"
+                type="text"
+                placeholder="e.g. Jane Appleseed"
+              />
+              <p id="name-error" class="error-p">error</p>
+            </div>
+            <div class="number">
+              <label for="number-input">CARD NUMBER</label>
+              <input
+                id="number-input"
+                type="text"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
+              <p id="number-error" class="error-p">error</p>
+            </div>
+            <div class="bottom-part">
+              <div class="date">
+                <label> EXP. DATE (MM/YY)</label>
+                <div class="date-inputs">
+                  <input type="number" id="mm-input" placeholder="MM" />
+                  <input type="number" id="yy-input" placeholder="YY" />
+                </div>
+                <p id="date-error" class="error-p">errors</p>
+              </div>
+              <div class="cvc-part">
+                <label for="cvc-input">CVC</label>
+                <input id="cvc-input" type="number" placeholder="e.g. 123" />
+                <p id="cvc-error" class="error-p">errors</p>
+              </div>
+            </div>
+            <button type="submit" id="submit">Confirm</button>
+          </form>
+        </div>
       </div>
     </main>
   </body>
