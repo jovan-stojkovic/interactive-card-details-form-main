@@ -28,15 +28,23 @@ function handleSubmit(e) {
   e.preventDefault();
 
   if (inputNumber.value) {
-    cardNumber.innerText = inputNumber.value;
+    if ((inputNumber.value.length === 16)) {
+      cardNumber.innerText = inputNumber.value;
+    } else if (inputNumber.value.length !== 16) {
+      cardNumber.innerText = "---- ---- ---- ----";
+      numberError.innerHTML =
+        "Wrong format, Card Number must have exactly 16 characters";
+    }
   } else {
     cardNumber.innerText = "---- ---- ---- ----";
+    numberError.innerText = "Can't be blank";
   }
 
   if (inputName.value) {
     cardName.innerText = inputName.value.toUpperCase();
   } else {
     cardName.innerText = "-------";
+    cardNameError.innerText = "Can't be blank";
   }
 
   if (inputDateMM.value) {
@@ -47,6 +55,7 @@ function handleSubmit(e) {
     }
   } else {
     cardDateMM.innerText = "--";
+    dateError.innerText = "Can't be blank";
   }
 
   if (inputDateYY.value) {
@@ -57,11 +66,13 @@ function handleSubmit(e) {
     }
   } else {
     cardDateYY.innerText = "--";
+    dateError.innerText = "Can't be blank";
   }
 
   if (inputCvc.value) {
     cardCvc.innerText = inputCvc.value;
   } else {
     cardCvc.innerText = "---";
+    cvcError.innerText = "Can't be blank";
   }
 }
