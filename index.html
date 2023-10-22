@@ -55,21 +55,21 @@
                 type="text"
                 placeholder="e.g. 1234 5678 9123 0000"
               />
-              <p id="number-error" class="error-p">error</p>
+              <p id="number-error" class="error-p"></p>
             </div>
             <div class="bottom-part">
               <div class="date">
-                <label> EXP. DATE (MM/YY)</label>
+                <label class="bottom-label"> EXP. DATE (MM/YY)</label>
                 <div class="date-inputs">
-                  <input type="number" id="mm-input" placeholder="MM" />
-                  <input type="number" id="yy-input" placeholder="YY" />
+                  <input type="text" id="mm-input" placeholder="MM" />
+                  <input type="text" id="yy-input" placeholder="YY" />
                 </div>
-                <p id="date-error" class="error-p">errors</p>
+                <p id="date-error" class="error-p"></p>
               </div>
               <div class="cvc-part">
-                <label for="cvc-input">CVC</label>
-                <input id="cvc-input" type="number" placeholder="e.g. 123" />
-                <p id="cvc-error" class="error-p">errors</p>
+                <label for="cvc-input" class="bottom-label">CVC</label>
+                <input id="cvc-input" type="text" placeholder="e.g. 123" />
+                <p id="cvc-error" class="error-p"></p>
               </div>
             </div>
             <button type="submit" id="submit">Confirm</button>
