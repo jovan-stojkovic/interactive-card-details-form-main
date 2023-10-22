@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive card details form</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="app.js"></script>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="left">
+        <div class="purple">
+          <div class="front-card card"></div>
+          <div class="back-card card"></div>
+        </div>
+      </div>
+      <div class="right">
+        <form id="form">
+          <div class="name">
+            <label for="name">CARDHOLDER NAME</label>
+            <input id="name" type="text" placeholder="e.g. Jane Appleseed" />
+          </div>
+          <div class="number">
+            <label for="number">CARD NUMBER</label>
+            <input
+              id="number"
+              type="text"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+          </div>
+          <div class="bottom-part">
+            <div class="date">
+              <label for="date"> EXP. DATE (MM/YY)</label>
+              <div class="date-inputs">
+                <input type="number" id="date" placeholder="MM" />
+                <input type="number" placeholder="YY" />
+              </div>
+            </div>
+            <div class="cvc-part">
+              <label for="cvc">CVC</label>
+              <input id="cvc" type="number" placeholder="e.g. 123">
+            </div>
+          </div>
+          <button type="submit">Confirm</button>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
